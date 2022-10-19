@@ -1,13 +1,14 @@
 #ifndef __WARP_H_
 #define __WARP_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <errno.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <unistd.h>
+// #include <string.h>
+// #include <errno.h>
 
 void perr_exit(const char *s);
+struct sockaddr
 int Accept(int fd,struct sockaddr *sa,socklen_t *salenptr);
 int Bind(int fd,const struct sockaddr * sa,socklen_t salen);
 int Connect(int fd,const struct sockaddr *sa,socklen_t salen);

@@ -26,7 +26,7 @@ int main(){
     serv.sin_family = AF_INET;
     serv.sin_port = htons(8888);
     serv.sin_addr.s_addr = htonl(INADDR_ANY);
-    int ret = bind(lfd,(struct sockaddr*)&serv,sizeof(serv));
+    bind(lfd,(struct sockaddr*)&serv,sizeof(serv));
 
     //¼àÌý
     listen(lfd,128);

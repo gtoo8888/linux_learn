@@ -1,13 +1,26 @@
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <sys/socket.h>
+// #include <sys/types.h>
+// #include <unistd.h>
+// #include <arpa/inet.h>
+// #include <string.h>
+// #include <ctype.h>
+
+// #include "warp.h"
+
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <sys/socket.h>
-#include <sys/types.h>
 #include <unistd.h>
-#include <arpa/inet.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <strings.h>
 #include <string.h>
 #include <ctype.h>
+#include <arpa/inet.h>
 
-#include "warp.h"
+#include "wrap.h"
+
 
 int main(){
     // ´´½¨socket
@@ -19,7 +32,7 @@ int main(){
     serv.sin_family = AF_INET;
     serv.sin_port = htons(8888);
     serv.sin_addr.s_addr = htonl(INADDR_ANY);
-    int ret = Bind(lfd,(struct sockaddr*)&serv,sizeof(serv));
+    Bind(lfd,(struct sockaddr*)&serv,sizeof(serv));
 
     //¼àÌý
     Listen(lfd,128);

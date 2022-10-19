@@ -1,12 +1,16 @@
-#include <stdio.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <unistd.h>
+// #include <sys/socket.h>
+// #include <arpa/inet.h>
+// #include <strings.h>
+// #include <errno.h>
+
 #include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <strings.h>
 #include <errno.h>
-
-
+#include <sys/socket.h>
 
 void perr_exit(const char *s) {
     perror(s);
