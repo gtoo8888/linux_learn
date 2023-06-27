@@ -8,3 +8,5 @@ heimaLinuxNetwork
 Linux_network_book
 Linux网络编程（第2版）宋敬彬 等著
 书上的代码
+
+主要包含了在linux中学习时候用到的代码
