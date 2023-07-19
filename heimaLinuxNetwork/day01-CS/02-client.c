@@ -64,7 +64,7 @@ int main(){
 // n表示显示的时候以数字的方式来显示
 // p表示显示进程信息(进程名和进程PID)
 
-// yzx@yzx-hcp:~$ netstat -anp | grep 8888
+// name@name-hcp:~$ netstat -anp | grep 8888
 //                 自己的一侧                  对方的一侧
 // tcp        0      0 0.0.0.0:8888            0.0.0.0:*               LISTEN      10644/./server  //listen一定出现在服务端，说明这个进程已经处于listen状态了
 // tcp        0      0 127.0.0.1:34568         127.0.0.1:8888          ESTABLISHED 10646/./client

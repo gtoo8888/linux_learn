@@ -1,0 +1,1 @@
+chmod 777 autoinstall.sh && sudo sh ./autoinstall.sh

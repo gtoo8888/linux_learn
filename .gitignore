@@ -1,1 +1,7 @@
 *.out
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.tgz
+*.deb

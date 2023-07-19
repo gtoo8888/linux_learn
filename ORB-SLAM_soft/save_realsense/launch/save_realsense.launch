@@ -1,0 +1,19 @@
+<launch>
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+  
+  <arg name="topics_imu" default="/camera/imu" />
+  <arg name="topics_image_raw" default="/camera/color/image_raw" />
+  <arg name="topics_depth" default="/camera/aligned_depth_to_color/image_raw" />
+  <arg name="save_path" default="$HOME/slam_learn/205-2.bag" />
+
+  <node pkg="rosbag" type="record" name="rosbag_record" 
+        args="$(arg topics_imu) $(arg topics_image_raw) $(arg topics_depth) -O $(arg save_path)"/>
+        
+  <node pkg="rostopic" type="rostopic" name="rostopic_imu" 
+        args="echo $(arg topics_imu)" launch-prefix="gnome-terminal -x"/>
+  <node pkg="rostopic" type="rostopic" name="rostopic_image"
+        args="echo $(arg topics_image_raw)" launch-prefix="gnome-terminal -x"/>
+  <node pkg="rostopic" type="rostopic" name="rostopic_depth" 
+        args="echo $(arg topics_depth)" launch-prefix="gnome-terminal -x"/>
+
+</launch>
