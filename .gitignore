@@ -5,3 +5,5 @@
 *.gz
 *.tgz
 *.deb
+build/
+devel/
